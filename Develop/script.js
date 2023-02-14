@@ -146,7 +146,3 @@ function confirmYesOrNo(str) {
     window.alert("Please only enter Y or N")
   }
 }
-
-// click generate -> presented w/ series of prompts -> 1. password length (8-128) 2. character types -> 
-// A. lowercase B. uppercase C. numeric D. Special Characters (need 1 of each)
-// 3. After all of that, generate password in alert of box on screen
