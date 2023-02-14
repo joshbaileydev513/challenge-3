@@ -23,7 +23,6 @@ function generatePassword() {
     // success
     // user entered numbers- now checking pwLength is between 8-128 
     pwLength = parseInt(pwLength)
-    console.log(pwLength)
     if (pwLength >= 8 && pwLength <= 128) {
     // user has entered an acceptable password length between 8-128
       pwLengthResult = pwLength;
@@ -118,10 +117,8 @@ function generatePassword() {
 
   // Loop through as many times are there are characters in the desired password 
   for (var i = 0; i <= pwLengthResult - 1; i++) {
-    console.log(chars.length);
       // each loop we select a random character from the available characters
       var randomNumber = Math.floor(Math.random() * chars.length);
-      console.log(randomNumber);
       password += chars.substring(randomNumber, randomNumber + 1);
   }
   return password

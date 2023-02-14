@@ -38,7 +38,7 @@ Or you can view the live page here: https://joshbaileydev513.github.io/challenge
 
 To use the main functionality of this page, you will click on the generate password button which will then be followed by four prompts. The first prompt is what you want your password length to be (between 8-128 characters), followed by if you want lowercase, uppercase, special characters, and numbers in your password. After all of those criteria are met, you are prompted with your new password to use based off the certain criteria. Below is a picture of what the deployed webpage will look like. 
 
-![alt text](assets/deployedPWgenerator.PNG)
+![Deployed Page](assets/deployedPWgenerator.PNG)
 
 Additionally, you can find the live page at this link: https://joshbaileydev513.github.io/challenge-3/
 
