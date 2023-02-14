@@ -91,6 +91,40 @@ function generatePassword() {
      // user did not choose y/n -prompted with message in window alert for confirmYesOrNO Function
      generatePassword();
    }
+
+  // validating at least one character type is selected
+   if (!pwLowercaseResult && !pwUppercaseResult && !pwSpecialCharactersResult && !pwNumericalResult ) {
+      window.alert("You must select at least one character type to generate a password");
+      generatePassword();
+   }
+
+  //  Generation of the password based off users responses
+  var chars = ""; // this stores the available characters that the password can be made of
+  var password = ""; // this stores the generated password 
+  
+  // Determine what the available characters are based on prior user input
+  if (pwLowercaseResult) {
+      chars = chars.concat("abcdefghijklmnopqrstuvwxyz")
+  } 
+  if (pwUppercaseResult) {
+      chars = chars.concat("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  }
+  if (pwSpecialCharactersResult) {
+      chars = chars.concat(" !#$%&'()*+,-./:;<=>?@[\]^_`{|}~");
+  } 
+  if (pwNumericalResult) {
+      chars = chars.concat("0123456789");
+  }
+
+  // Loop through as many times are there are characters in the desired password 
+  for (var i = 0; i <= pwLengthResult - 1; i++) {
+    console.log(chars.length);
+      // each loop we select a random character from the available characters
+      var randomNumber = Math.floor(Math.random() * chars.length);
+      console.log(randomNumber);
+      password += chars.substring(randomNumber, randomNumber + 1);
+  }
+  return password
 }
 
 
